@@ -1,0 +1,294 @@
+Trying to navigate to http://prestashop-automation.qatestlab.com.ua/ru/
+Navigated to http://prestashop-automation.qatestlab.com.ua/ru/ successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to click on UAH ₴
+Clicked successfully
+Trying to find: null by: By.xpath: //a[.='EUR €']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='EUR €']
+Founds successfully
+Trying to click on EUR €
+Clicked successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to get text of 0,58 €
+Text: 0,58 € of 0,58 € got successfully
+Trying to get text of 0,58 €
+Text: 0,58 € of 0,58 € got successfully
+Trying to get text of 0,95 €
+Text: 0,95 € of 0,95 € got successfully
+Trying to get text of 0,95 €
+Text: 0,95 € of 0,95 € got successfully
+Trying to get text of 0,91 €
+Text: 0,91 € of 0,91 € got successfully
+Trying to get text of 0,91 €
+Text: 0,91 € of 0,91 € got successfully
+Trying to get text of 1,79 €
+Text: 1,79 € of 1,79 € got successfully
+Trying to get text of 1,79 €
+Text: 1,79 € of 1,79 € got successfully
+Trying to get text of 1,02 €
+Text: 1,02 € of 1,02 € got successfully
+Trying to get text of 1,02 €
+Text: 1,02 € of 1,02 € got successfully
+Trying to get text of 1,07 €
+Text: 1,07 € of 1,07 € got successfully
+Trying to get text of 1,07 €
+Text: 1,07 € of 1,07 € got successfully
+Trying to get text of 0,58 €
+Text: 0,58 € of 0,58 € got successfully
+Trying to get text of 0,58 €
+Text: 0,58 € of 0,58 € got successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to click on EUR €
+Clicked successfully
+Trying to find: null by: By.xpath: //a[.='USD $']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='USD $']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='USD $']
+Founds successfully
+Trying to click on USD $
+Clicked successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to get text of 1,00 $
+Text: 1,00 $ of 1,00 $ got successfully
+Trying to get text of 1,00 $
+Text: 1,00 $ of 1,00 $ got successfully
+Trying to get text of 0,97 $
+Text: 0,97 $ of 0,97 $ got successfully
+Trying to get text of 0,97 $
+Text: 0,97 $ of 0,97 $ got successfully
+Trying to get text of 1,90 $
+Text: 1,90 $ of 1,90 $ got successfully
+Trying to get text of 1,90 $
+Text: 1,90 $ of 1,90 $ got successfully
+Trying to get text of 1,08 $
+Text: 1,08 $ of 1,08 $ got successfully
+Trying to get text of 1,08 $
+Text: 1,08 $ of 1,08 $ got successfully
+Trying to get text of 1,14 $
+Text: 1,14 $ of 1,14 $ got successfully
+Trying to get text of 1,14 $
+Text: 1,14 $ of 1,14 $ got successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to click on USD $
+Clicked successfully
+Trying to find: null by: By.xpath: //a[.='UAH ₴']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='UAH ₴']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='UAH ₴']
+Founds successfully
+Trying to click on UAH ₴
+Clicked successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to get text of 16,51 ₴
+Text: 16,51 ₴ of 16,51 ₴ got successfully
+Trying to get text of 16,51 ₴
+Text: 16,51 ₴ of 16,51 ₴ got successfully
+Trying to get text of 26,99 ₴
+Text: 26,99 ₴ of 26,99 ₴ got successfully
+Trying to get text of 26,99 ₴
+Text: 26,99 ₴ of 26,99 ₴ got successfully
+Trying to get text of 25,99 ₴
+Text: 25,99 ₴ of 25,99 ₴ got successfully
+Trying to get text of 25,99 ₴
+Text: 25,99 ₴ of 25,99 ₴ got successfully
+Trying to get text of 50,99 ₴
+Text: 50,99 ₴ of 50,99 ₴ got successfully
+Trying to get text of 50,99 ₴
+Text: 50,99 ₴ of 50,99 ₴ got successfully
+Trying to get text of 28,98 ₴
+Text: 28,98 ₴ of 28,98 ₴ got successfully
+Trying to get text of 28,98 ₴
+Text: 28,98 ₴ of 28,98 ₴ got successfully
+Trying to get text of 30,50 ₴
+Text: 30,50 ₴ of 30,50 ₴ got successfully
+Trying to get text of 30,50 ₴
+Text: 30,50 ₴ of 30,50 ₴ got successfully
+Trying to get text of 16,40 ₴
+Text: 16,40 ₴ of 16,40 ₴ got successfully
+Trying to get text of 16,40 ₴
+Text: 16,40 ₴ of 16,40 ₴ got successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to find: null by: By.cssSelector: .expand-more._gray-darker
+Founds successfully
+Trying to click on UAH ₴
+Clicked successfully
+Trying to find: null by: By.xpath: //a[.='USD $']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='USD $']
+Founds successfully
+Trying to find: null by: By.xpath: //a[.='USD $']
+Founds successfully
+Trying to click on USD $
+Clicked successfully
+Trying to find: null by: By.xpath: //div[@id='search_widget']/form[@action='http://prestashop-automation.qatestlab.com.ua/ru/search']/input[@name='s']
+Founds successfully
+Trying to find: null by: By.xpath: //div[@id='search_widget']/form[@action='http://prestashop-automation.qatestlab.com.ua/ru/search']/input[@name='s']
+Founds successfully
+Trying to click on 
+Clicked successfully
+Trying to change value of  on [dress]
+ changed on [dress] successfully
+Trying to find: null by: By.xpath: //div[@id='search_widget']/form[@action='http://prestashop-automation.qatestlab.com.ua/ru/search']/button[@type='submit']
+Founds successfully
+Trying to click on 
+Clicked successfully
+Trying to find: null by: By.className: total-products
+Founds successfully
+Trying to find: null by: By.className: total-products
+Founds successfully
+Trying to get text of Товаров: 7.
+Text: Товаров: 7. of Товаров: 7. got successfully
+Trying to find: null by: By.className: product-title
+Founds successfully
+Trying to find: null by: By.className: product-title
+Founds successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to find: null by: By.className: price
+Founds successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to get text of 1,00 $
+Text: 1,00 $ of 1,00 $ got successfully
+Trying to get text of 0,97 $
+Text: 0,97 $ of 0,97 $ got successfully
+Trying to get text of 1,14 $
+Text: 1,14 $ of 1,14 $ got successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to get text of 1,08 $
+Text: 1,08 $ of 1,08 $ got successfully
+Trying to get text of 1,90 $
+Text: 1,90 $ of 1,90 $ got successfully
+Trying to find: null by: By.xpath: /html//div[@id='js-product-list-top']//a[@class='select-title']/i[@class='material-icons pull-xs-right']
+Founds successfully
+Trying to find: null by: By.xpath: /html//div[@id='js-product-list-top']//a[@class='select-title']/i[@class='material-icons pull-xs-right']
+Founds successfully
+Trying to click on 
+Clicked successfully
+Trying to find: null by: By.linkText: Цене: от высокой к низкой
+Founds successfully
+Trying to find: null by: By.linkText: Цене: от высокой к низкой
+Founds successfully
+Trying to click on Цене: от высокой к низкой
+Clicked successfully
+Trying to find: null by: By.className: product-price-and-shipping
+Founds successfully
+Trying to get text of 1,90 $
+Text: 1,90 $ of 1,90 $ got successfully
+Trying to get text of 1,14 $
+-5%
+1,08 $
+Text: 1,14 $
+-5%
+1,08 $ of 1,14 $
+-5%
+1,08 $ got successfully
+Trying to get text of 1,14 $
+-5%
+1,08 $
+Text: 1,14 $
+-5%
+1,08 $ of 1,14 $
+-5%
+1,08 $ got successfully
+Trying to get text of 1,14 $
+Text: 1,14 $ of 1,14 $ got successfully
+Trying to get text of 1,14 $
+Text: 1,14 $ of 1,14 $ got successfully
+Trying to get text of 1,00 $
+Text: 1,00 $ of 1,00 $ got successfully
+Trying to get text of 1,00 $
+Text: 1,00 $ of 1,00 $ got successfully
+Trying to get text of 0,97 $
+Text: 0,97 $ of 0,97 $ got successfully
+Trying to get text of 0,97 $
+Text: 0,97 $ of 0,97 $ got successfully
+Trying to get text of 0,76 $
+-20%
+0,61 $
+Text: 0,76 $
+-20%
+0,61 $ of 0,76 $
+-20%
+0,61 $ got successfully
+Trying to get text of 0,76 $
+-20%
+0,61 $
+Text: 0,76 $
+-20%
+0,61 $ of 0,76 $
+-20%
+0,61 $ got successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully
+Trying to find: null by: By.className: product-title
+Founds successfully
+Trying to find: null by: By.className: discount
+Founds successfully
+Trying to find: null by: By.className: discount-percentage
+Founds successfully
+Trying to find: null by: By.className: regular-price
+Founds successfully
+Trying to find: null by: By.xpath: //span[@class='discount-percentage']/following-sibling::span
+Founds successfully
+Trying to get text of -5%
+Text: -5% of -5% got successfully
+Trying to get text of -5%
+Text: -5% of -5% got successfully
+Trying to get text of -20%
+Text: -20% of -20% got successfully
+Trying to get text of -20%
+Text: -20% of -20% got successfully
+Trying to find: null by: By.className: product-title
+Founds successfully
+Trying to find: null by: By.className: discount
+Founds successfully
+Trying to find: null by: By.className: discount-percentage
+Founds successfully
+Trying to find: null by: By.className: regular-price
+Founds successfully
+Trying to find: null by: By.xpath: //span[@class='discount-percentage']/following-sibling::span
+Founds successfully
+Trying to get text of -5%
+Text: -5% of -5% got successfully
+Trying to get text of 1,14 $
+Text: 1,14 $ of 1,14 $ got successfully
+Trying to get text of 1,08 $
+Text: 1,08 $ of 1,08 $ got successfully
+Trying to get text of -20%
+Text: -20% of -20% got successfully
+Trying to get text of 0,76 $
+Text: 0,76 $ of 0,76 $ got successfully
+Trying to get text of 0,61 $
+Text: 0,61 $ of 0,61 $ got successfully

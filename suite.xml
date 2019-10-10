@@ -13,4 +13,10 @@
             <class name="executive.ExecutiveTest" />
         </classes>
     </test>
+    <test name="Test on InternetExplorer">
+        <parameter name="browser" value="ie"/>
+        <classes>
+            <class name="executive.ExecutiveTest" />
+        </classes>
+    </test>
 </suite>

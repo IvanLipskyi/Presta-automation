@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import properties.BrowserProperties;
 
+import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class SortingResult extends MainPageSettings {
     private final By productPrice = By.className("price");
     private final By sortingType = By.xpath("/html//div[@id='js-product-list-top']//a[@class='select-title']/i[@class='material-icons pull-xs-right']");
     private final By sortingText = By.linkText("Цене: от высокой к низкой");
-    private final String sortingURL = "http://prestashop-automation.qatestlab.com.ua/ru/search?controller=search&order=product.price.desc&s=dress";
+    private final String sortingURL = "http://prestashop-automation.qatestlab.com.ua/ru/search?order=product.price.desc&s=dress";
     private final By productRegularPrice = By.className("product-price-and-shipping");
     private final By productsWithDiscount = By.className("discount");
     private final By discountPercentageSign = By.className("discount-percentage");
@@ -22,6 +23,12 @@ public class SortingResult extends MainPageSettings {
     private final By regularPriceOfDiscountProduct = By.className("regular-price");
     private final int substringNum1 = 0;
     private final int substringNum2 = 4;
+    private final By chosenProduct = By.cssSelector("[data-id-product='5']");
+    private final By sizeSelector = By.cssSelector("select[name='group[1]']");
+    private final By sizeL = By.cssSelector("[value='3']");
+    private final By colorBlue = By.cssSelector(".product-variants ul .input-container:nth-of-type(3)");
+    private final By increaseQuantity = By.cssSelector(".bootstrap-touchspin-up.btn.btn-touchspin.js-touchspin");
+    private final By addToCart = By.cssSelector(".add-to-cart.btn.btn-primary");
 
     /**
      * Get the real size of all found products after searching procedure.
@@ -156,5 +163,20 @@ public class SortingResult extends MainPageSettings {
                 BrowserProperties.log("The regular price: " + regularPrice + "$" + " minus discount value:" + discountValue + "$" + " matches the actual price:" + actualPrice + "$");
             }
         return true;
+    }
+
+    public void chooseProduct(){
+        waitElementToBeClickable(chosenProduct);
+        driver.findElement(chosenProduct).click();
+        waitElementToBeClickable(sizeSelector);
+        driver.findElement(sizeSelector).click();
+        waitElementToBeClickable(sizeL);
+        driver.findElement(sizeL).click();
+        waitElementToBeClickable(colorBlue);
+        driver.findElement(colorBlue).click();
+        waitElementToBeClickable(increaseQuantity);
+        driver.findElement(increaseQuantity).click();
+        waitElementToBeClickable(addToCart);
+        driver.findElement(addToCart).click();
     }
 }

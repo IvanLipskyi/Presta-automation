@@ -3,6 +3,7 @@ package executive;
 import org.testng.annotations.Test;
 import properties.BrowserProperties;
 import tests.Currency;
+import tests.Language;
 import tests.MainPageSettings;
 import tests.SortingResult;
 
@@ -19,6 +20,9 @@ public class ExecutiveTest extends BrowserProperties {
 
         MainPageSettings mainPageSettings = new MainPageSettings();
 
+        mainPageSettings.checkLanguageSwitch(Language.UKRAINIAN);
+        mainPageSettings.checkLanguageSwitch(Language.RUSSIAN);
+
         mainPageSettings.changeAndCheckCurrencyType(Currency.EUR);
         assertTrue(mainPageSettings.checkCurrencyOnPage(Currency.EUR), "Some of the goods are not displayed in EUR currency!");
 
@@ -32,6 +36,9 @@ public class ExecutiveTest extends BrowserProperties {
 
         SortingResult sortingResult = mainPageSettings.searchProduct("dress");
         BrowserProperties.log("Verifying that the headline of all found products with definite number matches the real quantity of found products");
+        mainPageSettings.checkLanguageSwitch(Language.UKRAINIAN);
+        assertEquals(sortingResult.getAllFoundProductsHeadline(), "Знайдено товарів: " + sortingResult.getAllFoundResultsQuantity() + ".");
+        mainPageSettings.checkLanguageSwitch(Language.RUSSIAN);
         assertEquals(sortingResult.getAllFoundProductsHeadline(), "Товаров: " + sortingResult.getAllFoundResultsQuantity() + ".");
 
         assertTrue(sortingResult.checkCurrencyOfFoundProducts(Currency.USD), "One or some of the goods on the page don't match the currency type in the header!");
@@ -40,5 +47,6 @@ public class ExecutiveTest extends BrowserProperties {
         assertTrue(sortingResult.isSortedFromHighToLow(), "Some of the goods are sorted incorrectly!");
         assertTrue(sortingResult.checkDiscountProductPrice(), "Some of the products don't have a discount sign, actual or regular price");
         assertTrue(sortingResult.checkCorrectDiscountCalculation(), "Some of the goods have incorrect discount value");
+        sortingResult.chooseProduct();
     }
 }

@@ -18,7 +18,7 @@ public class MainPageSettings extends BaseSettings {
 
 
     /**
-     * Метод для выбора различных валют на сайте.
+     * Method for clicking the different currency from the drop-down menu.
      * @param currency
      */
     public void changeAndCheckCurrencyType(Currency currency){
@@ -43,7 +43,7 @@ public class MainPageSettings extends BaseSettings {
     }
 
     /**
-     * Метод для проверки совпадения выбраной валюты в шапке и значка данной валюты на сайте.
+     * Method for checking the match between a chosen currency in header and this currency symbol for products, displayed on the site.
      * @param currency
      * @return
      */
@@ -85,7 +85,7 @@ public class MainPageSettings extends BaseSettings {
     }
 
     /**
-     * Нажатие на кнопку поиска и ввод определенной строки для поиска.
+     * Click the search-box menu and find any string.
      * @param str
      */
     public SortingResult searchProduct(String str){

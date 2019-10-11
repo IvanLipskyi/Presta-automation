@@ -20,20 +20,30 @@ public class SortingResult extends MainPageSettings {
     private final By discountPercentageSign = By.className("discount-percentage");
     private final By actualPriceOfDiscountProduct = By.xpath("//span[@class='discount-percentage']/following-sibling::span");
     private final By regularPriceOfDiscountProduct = By.className("regular-price");
+    private final int substringNum1 = 0;
+    private final int substringNum2 = 4;
 
+    /**
+     * Get the real size of all found products after searching procedure.
+     * @return
+     */
     public int getAllFoundResultsQuantity() {
         waitElementToBeClickable(productTitle);
         return driver.findElements(productTitle).size();
     }
 
+    /**
+     * Get the headline of found elements with definite quantity of founds products.
+     * @return
+     */
     public String getAllFoundProductsHeadline() {
         waitElementToBeVisible(foundTotalProductsHeadline);
         return driver.findElement(foundTotalProductsHeadline).getText();
     }
 
     /**
+     * Check that all the products contain USD currency symbol.
      * Проверка правильности отображения валюты после фильтра по USD.
-     *
      * @param currency
      * @return
      */
@@ -52,7 +62,7 @@ public class SortingResult extends MainPageSettings {
     }
 
     /**
-     * Поиск кнопки сортировки, нажатие на неё по выбранному критерию.
+     * Click on sorting button and choose a criteria of sorting.
      */
     public void sortProducts() {
         waitElementToBeClickable(sortingType);
@@ -62,8 +72,9 @@ public class SortingResult extends MainPageSettings {
     }
 
     /**
-     * Проверяем правильность сортировки товаров от большего к меньшему.
-     * Получаем цену наших продуктов и
+     * This method checks that the products are sorted via criteria "Prices: From high to low".
+     * In this method we get the prices of each product and compare among themselves.
+     * Comparing strategy: the price of the first product bigger than the price of the second product, etc.
      * @return
      */
     public boolean isSortedFromHighToLow() {
@@ -71,8 +82,8 @@ public class SortingResult extends MainPageSettings {
         List<WebElement> regularPrice = driver.findElements(productRegularPrice);
         BrowserProperties.log("Verifying sorting method \"prices: from high to low\"");
         for (int i = 0; i + 1  < regularPrice.size(); i++) {
-            Double firstPrice = Double.parseDouble(regularPrice.get(i).getText().substring(0, 4).replace(",", "."));
-            Double secondPrice = Double.parseDouble(regularPrice.get(i + 1).getText().substring(0, 4).replace(",", "."));
+            Double firstPrice = Double.parseDouble(regularPrice.get(i).getText().substring(substringNum1, substringNum2).replace(",", "."));
+            Double secondPrice = Double.parseDouble(regularPrice.get(i + 1).getText().substring(substringNum1, substringNum2).replace(",", "."));
             if (firstPrice < secondPrice) {
                 BrowserProperties.log("The price of the first element is less than the price of the second element!");
                 return false;
@@ -82,6 +93,12 @@ public class SortingResult extends MainPageSettings {
         return true;
     }
 
+    /**
+     * In this method we find all products with discount price.
+     * We check that the products have a discount sign.
+     * Next step we check that these products have two prices: actual and regular.
+     * @return
+     */
     public boolean checkDiscountProductPrice(){
         waitElementToBeClickable(productTitle);
         List<WebElement>productsWithDiscount = driver.findElements(this.productsWithDiscount);
@@ -111,6 +128,14 @@ public class SortingResult extends MainPageSettings {
             return false;
         }
     }
+
+    /**
+     * Check the correct discount calculation.
+     * We get the discount percentage from discount signs.
+     * Next step we get the clean price of all discount products
+     * Next step we check that the discount amount was caused correctly on the website.
+     * @return
+     */
     public boolean checkCorrectDiscountCalculation(){
         waitElementToBeClickable(productTitle);
         List<WebElement>productsWithDiscount = driver.findElements(this.productsWithDiscount);
@@ -121,8 +146,8 @@ public class SortingResult extends MainPageSettings {
         BrowserProperties.log("Verifying the correct calculation of discount percentage");
         for (int i = 0; i < productsWithDiscount.size(); i++){
             int discPerc = Integer.parseInt(discountPercentageSign.get(i).getText().replace("%", ""));
-            float regularPrice = Float.parseFloat(regularPriceOfDiscountProduct.get(i).getText().substring(0, 4).replace(",", "."));
-            float actualPrice = Float.parseFloat(actualPriceOfDiscountProduct.get(i).getText().substring(0, 4).replace(",", "."));
+            float regularPrice = Float.parseFloat(regularPriceOfDiscountProduct.get(i).getText().substring(substringNum1, substringNum2).replace(",", "."));
+            float actualPrice = Float.parseFloat(actualPriceOfDiscountProduct.get(i).getText().substring(substringNum1, substringNum2).replace(",", "."));
             float discountValue = Float.parseFloat(decimalFormat.format((regularPrice * (Math.abs(discPerc))) / 100).replace(",","."));
             if ((regularPrice - discountValue) != actualPrice) {
                 BrowserProperties.log("The regular price: " + regularPrice + "$" + " minus discount value:" + discountValue + "$" + " doesn't match the actual price:" + actualPrice + "$");

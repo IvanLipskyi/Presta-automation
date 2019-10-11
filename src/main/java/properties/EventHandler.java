@@ -8,14 +8,26 @@ import org.openqa.selenium.support.events.WebDriverEventListener;
 
 import java.util.Arrays;
 
+/**
+ * Class for handling different events.
+ */
 class EventHandler implements WebDriverEventListener {
     static StringBuilder sb = new StringBuilder();
 
+    /**
+     * Method for writing correct log for events
+     * @param message
+     */
     private void eventLogs(String message) {
         System.out.println(message);
         sb.append(message).append("\n");
     }
 
+    /**
+     * Getting the name of web element.
+      * @param webElement
+     * @return
+     */
     private String getElement(WebElement webElement) {
         if (webElement != null) {
             if (webElement.getText() != null) {

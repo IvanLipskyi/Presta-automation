@@ -11,13 +11,16 @@ public abstract class BaseSettings {
     final WebDriver driver;
     final WebDriverWait wait;
 
+    /**
+     * Initialization of WebDriver and WebDriverWait
+     */
     BaseSettings() {
         driver = BrowserProperties.getDriver();
         wait = new WebDriverWait(driver, 10);
     }
 
     /**
-     * Ожидание кликабельности.
+     * Waiting of an element to be successfully clicked.
      * @param by
      */
     void waitElementToBeClickable(By by){
@@ -25,7 +28,7 @@ public abstract class BaseSettings {
     }
 
     /**
-     * Ожидание видимости.
+     * Waiting for an element to be visible.
      * @param by
      */
     void waitElementToBeVisible(By by){

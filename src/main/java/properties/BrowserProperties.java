@@ -21,6 +21,12 @@ public abstract class BrowserProperties {
 
     private static EventFiringWebDriver driver;
 
+    /**
+     * Browser initializing.
+     * Depending of the parameter we will run different browsers.
+     * In our case the queue will be: Chrome, Firefox, IE.
+     * @param browser
+     */
     @BeforeClass
     @Parameters ("browser")
     public void setUp(String browser) {
@@ -29,6 +35,10 @@ public abstract class BrowserProperties {
         driver.get(homePageUrl);
     }
 
+    /**
+     * Method for closing the browser.
+     * @param browser
+     */
     @AfterClass
     @Parameters ("browser")
     public void tearDown(String browser) {
@@ -38,15 +48,30 @@ public abstract class BrowserProperties {
         writeLogs(browser);
     }
 
+    /**
+     * Method for writing the logs of our testing process.
+     * All the logs will be saved in Reporter.
+     * @param message
+     */
     public static void log(String message) {
         Reporter.log(message);
         System.out.println(message);
     }
 
+    /**
+     * BaseSettings class refers to this return statement for initializing.
+     * @return
+     */
     public static WebDriver getDriver() {
         return driver;
     }
 
+    /**
+     * Method for writing and saving logs of different events.
+     * Different browsers will have their own txt file.
+     * Variants of events were taken from class EventHandler
+     * @param browserName
+     */
     private void writeLogs(String browserName) {
         File logsFile = new File(browserName + "Logs.txt");
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(logsFile))) {
@@ -57,6 +82,11 @@ public abstract class BrowserProperties {
         EventHandler.sb = new StringBuilder();
     }
 
+    /**
+     * Setup the browser configurations.
+     * @param browserName
+     * @return
+     */
     private static EventFiringWebDriver getConfiguredDriver(String browserName) {
         WebDriver driver = getDriver(browserName);
         driver.manage().window().maximize();
@@ -66,6 +96,11 @@ public abstract class BrowserProperties {
         return eventFiringWebDriver;
     }
 
+    /**
+     * Method to initialize different drivers for different browsers.
+     * @param browserName
+     * @return
+     */
     private static WebDriver getDriver(String browserName) {
         switch (browserName) {
             case "chrome":

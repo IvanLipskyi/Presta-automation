@@ -11,6 +11,9 @@ import static org.testng.Assert.assertTrue;
 
 public class ExecutiveTest extends BrowserProperties {
 
+    /**
+     * Main method to run our tests.
+     */
     @Test
     public void TrialTest(){
 
@@ -28,6 +31,7 @@ public class ExecutiveTest extends BrowserProperties {
         mainPageSettings.changeAndCheckCurrencyType(Currency.USD);
 
         SortingResult sortingResult = mainPageSettings.searchProduct("dress");
+        BrowserProperties.log("Verifying that the headline of all found products with definite number matches the real quantity of found products");
         assertEquals(sortingResult.getAllFoundProductsHeadline(), "Товаров: " + sortingResult.getAllFoundResultsQuantity() + ".");
 
         assertTrue(sortingResult.checkCurrencyOfFoundProducts(Currency.USD), "One or some of the goods on the page don't match the currency type in the header!");

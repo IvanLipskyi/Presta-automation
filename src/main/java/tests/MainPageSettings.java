@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public class MainPageSettings extends BaseSettings {
-    private final By currencyButton = By.cssSelector(".expand-more._gray-darker");
+    private final By currencyButton = By.cssSelector("._gray-darker.expand-more.hidden-sm-down");
     private final By eurCurrency = By.xpath("//a[.='EUR €']");
     private final By uahCurrency = By.xpath("//a[.='UAH ₴']");
     private final By usdCurrency = By.xpath("//a[.='USD $']");
